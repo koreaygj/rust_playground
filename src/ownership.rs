@@ -1,5 +1,3 @@
-use std::iter;
-
 pub fn move_function() {
     // move
     let s1 = String::from("hello");
@@ -44,14 +42,14 @@ pub fn change(some_string: &mut String) {
     some_string.push_str(", changed");
 }
 
-// 단어 찾기
-pub fn first_word(s: &String) -> usize {
+// slice 활용해서 단어 찾기
+pub fn first_word(s: &String) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
-            return i;
+            return &s[0..i];
         }
     }
-    s.len()
+    &s[..]
 }
