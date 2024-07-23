@@ -1,3 +1,5 @@
+use ownership::first_word;
+
 mod ownership;
 
 fn main() {
@@ -24,4 +26,9 @@ fn main() {
 
     ownership::change(&mut s1);
     println!("mut {}", s1);
+
+    let mut s = String::from("hello world");
+    let word = ownership::first_word(&s);
+    println!("{}", word);
+    s.clear();
 }
