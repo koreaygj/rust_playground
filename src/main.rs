@@ -18,7 +18,10 @@ fn main() {
     // i32는 Copy이므로 앞으로 계속 x를
     println!("{}", x);
 
-    let s1 = String::from("borrow");
+    let mut s1 = String::from("borrow");
     let len = ownership::calculate_length(&s1);
     println!("The length of '{}' is {}", s1, len);
+
+    ownership::change(&mut s1);
+    println!("mut {}", s1);
 }

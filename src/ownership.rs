@@ -37,3 +37,7 @@ pub fn makes_copy(some_integer: i32) {
 pub fn calculate_length(s: &String) -> usize {
     s.len()
 }
+
+pub fn change(some_string: &mut String) {
+    some_string.push_str(", changed");
+}
