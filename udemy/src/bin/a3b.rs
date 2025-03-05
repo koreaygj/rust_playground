@@ -9,4 +9,18 @@
 // * Use an if..else if..else block to determine which message to display
 // * Use the println macro to display messages to the terminal
 
-fn main() {}
+// * Display ">5", "<5", or "=5" based on the value of a variable
+//   is > 5, < 5, or == 5, respectively
+fn is_over_five(num: i32) {
+    if num > 5 {
+        println!(">5");
+    } else if num == 5 {
+        println!("=5");
+    } else {
+        println!("<5");
+    }
+}
+fn main() {
+    let num = 10;
+    is_over_five(num);
+}
