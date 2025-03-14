@@ -12,4 +12,10 @@
 //   to uppercase and lowercase
 //   * Try searching for: to_uppercase, to_lowercase
 
-fn main() {}
+fn main() {
+    let string = "try rust standard library documentation";
+    let upper_str = string.to_uppercase();
+    println!("upper case {:?}", upper_str);
+    let lower_str = upper_str.to_lowercase();
+    println!("lower case {:?}", lower_str);
+}
